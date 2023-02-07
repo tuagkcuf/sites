@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+    <script src="juery-3.6.0.min.js"></script>
+    <style>
+
+        .robot {
+            position: relative;
+            left: 200px;
+        }
+        .antenna {
+            width: 5px;
+            height: 0;
+            border: 6px solid transparent;
+            border-bottom: 100px solid gray;
+            border-top: 20px double gray;
+            background-color: transparent;
+            position: relative;
+            left: 161px;
+        }
+        @keyframes laser {
+            50% {
+                background: radial-gradient(circle, red 20%, transparent 70%), red;
+            }
+        }
+        .laser {
+            animation: laser .5s infinite;
+        }
+        .head {
+            width: 150px;
+            height: 180px;
+            border-radius: 60px 60px 10px 10px;
+            border-bottom: 40px double #7c8c91;
+            position: relative;
+            left: 95px;
+            background: radial-gradient(circle, white 20%, transparent 30%), red;
+            background-size: 75px 180px;
+        }
+        .torso {
+            height: 0;
+            width: 140px;
+            border-top: 300px solid red;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-radius: 60px 60px 200px 200px;
+        }
+        .left {
+            font-family: 'Poller One', verdana, arial, sans-serif;
+            font-weight: bold;
+            font-size: 250px;
+            transform: rotate(200deg);
+            position: relative;
+            top: -308px;
+            left: -210px;
+            z-index: -1;
+        }
+        .right {
+            font-family: 'Poller One', verdana, arial, sans-serif;
+            font-weight: bold;
+            font-size: 250px;
+            transform: scaleY(-1) rotate(20deg);
+            position: relative;
+            top: -605px;
+            left: 210px;
+            z-index: -1;
+        }
+        .foot {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border-radius: 100%;
+            border: 30px solid black;
+            position: relative;
+            left: 115px;
+            top: -20px;
+            z-index: -1;
+        }
+        button {
+            display: block;
+            margin: 5px auto;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+        }
+        .buttons {
+            width: 200px;
+            height: 70px;
+            position: relative;
+            top: -370px;
+            left: 267px;
+            background-color: black;
+            padding-top: 10px;
+            border: 5px solid white;
+        }
+        button:hover {
+            color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="robot">
+
+        <div class="antenna"></div>
+
+        <div class="head"></div>
+
+        <div class="torso">
+            <div class="left">j</div>
+            <div class="right">j</div>
+        </div>
+
+        <div class="foot"></div>
+    </div>
+    
+    <div class="buttons">
+        <button class="flash">on/off eyes</button>
+        <button class="color">on.off background</button>
+    </div>
+    <script>
+        // eyes
+        $('.flash').click(function() {
+            $('.brain').toggleClass('laser');
+        });
+
+        // background
+        $('.color').click(function() {
+            var red = Math.floor(Math.random() * 255);
+            var green = Math.floor(Math.random() * 255);
+            var blue = Math.floor(Math.random() * 255);
+            var randomRGBA = 'rgba('+red+','+green+','+blue+',1)';
+            $('body').css('background', randomRGBA);
+        })
+
+    </script>
+
+</body>
+</html>

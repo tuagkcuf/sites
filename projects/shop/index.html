@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <script>src="jquery-3.6.0.min.js"</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            background: #232323;
+            height: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        div {
+            height: 250px;
+            background-size: cover;
+            position: relative;
+            margin: 70px 0 75px 0;
+        }
+        p {
+            background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,.4));
+            position: absolute;
+            color: white;
+            bottom: 0;
+            padding: 10px;
+            margin: 0;
+            font-size: 25px;
+            height: 25px;
+            line-height: 24px; 
+            text-align: justify;
+            transition: height .5s;
+        }
+        h1 {
+            font-family: 'Londrina Shadow', cursive;
+            text-align: center;
+            color: white;
+            margin: 50px 0 150px 0;
+            font-size: 70px;
+        }
+        h2 {
+            font-size: 70px;
+        }
+        small {
+            font-size: 15px;
+            opacity: 0;
+        }
+        .div1 {
+            background-image: url(1.jpg);
+        }
+        .div2 {
+            background-image: url(2.jpg);
+        }
+        .div3 {
+            background-image: url(3.jpg);
+        }
+        .cost {
+            float: right;
+        }
+        .h1-span {
+            font-size:60%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .give-data p {
+            height: 100px;
+        }
+        .give-data small {
+            opacity: 1;
+        }
+        @media (max-width:500px) {
+            h1 {
+                font-size: 50px;
+                margin-top: 20px;
+                margin-bottom: 50px;
+                line-height: 40px;
+            }
+            p {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            small {
+                font-size: 16px;
+            }
+            div {
+                margin: 20px 12px 0 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Danils business project<br><span class="h1-span">made with love</span></h1>
+    
+
+    <div class="div1">
+        <p>Игровой ноутбук<span class="cost">24999$</span></span><br><small>Невероятный игровой ноутбук с экологически чистым процессором. Является лучшим в мире. Способен использовать абсолютно все известные игры в мире.</small></p>
+    </div>
+
+    <div class="div2">
+        <p>Игровая мышь<span class="cost">3999$</span><br><small>Лучшая игровая мышка в своем роде. Использует функцию распознавания руки, чтобы определять текущего пользователя. Новейшая нейросеть позволяет определять индивидуальные настройки под нужды каждого пользователя.</small></p>
+    </div>
+
+    <div class="div3">
+        <p>Игровая клавиатура<span class="cost">7999$</span><br><small>Новейшая модель игровой клавиатуры позволяет пользователям в полной мере ощущать всю остроту происходящего на экране. Функции вибрации и теплорегулирования помогут вам ощутить невероятные ощущения.</small></p>
+    </div>
+    <script>$("div").on("click", function () {(this).toggleClass("give-data");});</script>
+    <br><br><br>
+</body>

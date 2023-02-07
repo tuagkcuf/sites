@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        header {
+            background-image: url(2.png);
+            text-align: center;
+            color: white;
+            background-size: cover;
+        }
+        img {
+            margin-top: 100px;
+            border: 3px solid red;
+            border-radius: 30px;
+        }
+        li {
+            display: inline;
+            padding: 10px;
+        }
+        a {
+            color: white;
+        }
+        ul {
+            background: rgba(70, 81, 94, 0.5);
+            padding: 15px;
+        }
+        article {
+            max-width: 500px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 70px;
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 36px;
+                padding: 5px;
+            }
+            li {
+                padding: 5px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="1.png">
+        <h1>Danils Blog</h1>
+        <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">My ideas</a></li>
+            <li><a href="#">My projects</a></li>
+        </ul>
+    </header>
+    <article>
+        <h2>ctypto machine</h2>
+    </article>
+    <article>
+        <p>i will obtain a lot of money from this fucking machine</p>
+        <button>Like</button>
+    </article>
+    <article>
+        <h2>my friends</h2>
+    </aticle>
+    <article>
+        <p>a lot of famouse people</p>
+        <button>Like</button>
+    </article>
+    <article>
+        <h2>nothing</h2>
+    </article>
+    <article>
+        <p>nothing</p>
+        <button>Like</button>
+    </article>
+    <script>
+        $("button").on("click", function() {alert("Click");});
+    </script>
+</body>
